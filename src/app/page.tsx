@@ -1,7 +1,10 @@
+'use client'
+import { ButtonMode } from "@/components/ui/ButtonMode";
 export default function Home() {
   return (
-    <div>
-      <h1>BUG HUNTERS</h1>
+    <div className="dark:bg-black">
+      <h1 className="dark:text-white">BUG HUNTERS</h1>
+      <ButtonMode className="bg-white" />
     </div>
   );
 }
