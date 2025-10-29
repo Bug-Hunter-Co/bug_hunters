@@ -1,6 +1,13 @@
-import { Geist_Mono } from "next/font/google"
+import { Montserrat, Hammersmith_One } from "next/font/google"
 
-export const font_geist = Geist_Mono({
+// title font
+export const font_title = Montserrat({
     subsets: ["latin"],
-    weight: ["100","200","300", "500","600", "700","800","900"]
+    weight: ["600","800"]
+})
+
+// paragraph font
+export const font_paragraph = Hammersmith_One({
+    subsets: ["latin"],
+    weight: ["400"]  // Aquí debes usar un arreglo, no un objeto
 })

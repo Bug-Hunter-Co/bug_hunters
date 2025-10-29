@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { font_geist } from "../ui/fonts";
+import { font_paragraph, font_title } from "../ui/fonts";
 
 interface stat {
     value: string;
@@ -20,7 +20,7 @@ export const AboutSection = ({
     stats,
 }: AboutSectionProps) => {
     return (
-        <section className={`${font_geist.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
+        <section className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
             <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 {/* Imagen */}
                 <div className=" flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl">
@@ -34,7 +34,7 @@ export const AboutSection = ({
                 </div>
 
                 <div>
-                    <h2 className='text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]'>
+                    <h2 className={`${font_title.className} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}>
                         {title}
                     </h2>
 
