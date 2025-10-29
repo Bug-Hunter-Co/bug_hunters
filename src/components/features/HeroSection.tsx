@@ -1,13 +1,13 @@
 import React from 'react'
-import { font_geist } from '../ui/fonts'
+import { font_paragraph,font_title } from '../ui/fonts'
 import Image from 'next/image'
 
 export const HeroSection = () => {
     return (
-        <section className={`${font_geist.className} flex justify-center pt-40 max-md:pt-30 pb-20 dark:bg-[#1E1E1E] bg-[#FFFFFB] text-gray-800`} >
+        <section className={`${font_paragraph.className} flex justify-center pt-40 max-md:pt-30 pb-20 dark:bg-[#1E1E1E] bg-[#FFFFFB] text-gray-800`} >
             <div className='flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center'>
                 <div className='text-gray-900 mb-6 w-full dark:text-[#E0E0E0] flex flex-col gap-8 max-lg:text-center max-md:items-center'>
-                    <h1 className='text-3xl font-extrabold'>Transforma tu vision en realidad digital</h1>
+                    <h1 className={`${font_title.className} text-4xl font-extrabold`}>Transforma tu vision en realidad digital</h1>
                     <p>XXXXXXXXXXXX</p>
                     <div className='flex gap-8 font-bold max-lg:text-sm max-xl:gap-6'>
                         <button className='cursor-pointer bg-[#37484E] px-8 py-4 rounded-lg text-white dark:bg-[#789987] max-xl:px-6 hover:scale-103'>Comienza ahora</button>
