@@ -21,7 +21,7 @@ export const AboutSection = ({
 }: AboutSectionProps) => {
     return (
         <section className={`${font_geist.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
-            <div className="grid grid-cols-2 gap-16 w-8/10 items-center">
+            <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 {/* Imagen */}
                 <div className=" flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl">
                     <Image
