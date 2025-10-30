@@ -11,5 +11,5 @@ html {
 }
 
 section {
-  scroll-margin-top: 100px; /* ajusta el valor según la altura de tu navbar */
+  scroll-margin-top: 70px; /* ajusta el valor según la altura de tu navbar */
 }
