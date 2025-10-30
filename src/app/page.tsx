@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { AboutSection } from "@/components/features/AboutSection";
 import { HeroSection } from "@/components/features/HeroSection";
+import TeamSection from "@/components/features/TeamSection";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
             { value: "8+", label: "Años de experiencia" },
           ]}
         />
+        <TeamSection />
       </main>
 
 

@@ -19,7 +19,7 @@ export const Navbar = () => {
 
     const { theme } = useTheme();
     return (
-        <div className={`${font_title.className} flex rounded-2xl mt-10 py-4 px-10 w-7/10 max-xl:w-8/10 max-lg:w-9/10 max-md:w-full max-sm:hidden max-md:rounded-none max-md:mt-0 items-center justify-between bg-[#FDF8F4] dark:bg-[#2A2A2A] fixed`}>
+        <div className={`${font_title.className} flex rounded-xl mt-10 py-4 px-10 w-7/10 max-xl:w-8/10 max-lg:w-9/10 max-md:w-full max-sm:hidden max-md:rounded-none max-md:mt-0 items-center justify-between bg-[#FDF8F4] dark:bg-[#2A2A2A] fixed`}>
             {theme === 'light' ? (<Image src={'/logo_black.png'} alt="icon" width={50} height={50} />) : (<Image src={'/logo_white.png'} alt="icon" width={50} height={50} />)}
             <div className="flex backdrop-blur-sxl gap-16 max-xl:gap-10 max-lg:gap-6 max-md:gap-4">
                 {NAVBAR_LINKS.map((item, index) => (
