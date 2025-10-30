@@ -5,3 +5,11 @@
 * {
     transition: ease-in-out .2s;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px; /* ajusta el valor según la altura de tu navbar */
+}

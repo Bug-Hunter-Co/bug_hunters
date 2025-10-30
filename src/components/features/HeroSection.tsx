@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const HeroSection = () => {
     return (
-        <section className={`${font_paragraph.className} flex justify-center pt-40 max-md:pt-30 pb-20 dark:bg-[#1E1E1E] bg-[#FFFFFB] text-gray-800`} >
+        <section id='inicio' className={`${font_paragraph.className} flex justify-center pt-40 max-md:pt-30 pb-20 dark:bg-[#1E1E1E] bg-[#FFFFFB] text-gray-800`} >
             <div className='flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center'>
                 <div className='text-gray-900 mb-6 w-full dark:text-[#E0E0E0] flex flex-col gap-8 max-lg:text-center max-md:items-center'>
                     <h1 className={`${font_title.className} text-4xl font-extrabold`}>Transforma tu vision en realidad digital</h1>
