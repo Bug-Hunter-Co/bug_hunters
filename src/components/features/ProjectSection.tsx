@@ -10,7 +10,7 @@ export const ProjectSection = () => {
                 <div className="grid max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-3 grid-cols-4 gap-6 w-full">
                     <CardProject
                         title="GreenPath"
-                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa'"
+                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
                         src="/project.webp"

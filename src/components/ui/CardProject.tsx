@@ -38,7 +38,7 @@ export const CardProject = ({
                 </h3>
 
                 {/* Descripción con toggle */}
-                <p className="text-sm text-[#555] dark:text-[#B0B0B0] line-clamp-2">
+                <p className="text-sm text-[#555] dark:text-[#B0B0B0] line-clamp-3">
                     {description}
                 </p>
                 {/* Tecnologías */}
@@ -59,10 +59,9 @@ export const CardProject = ({
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <RemoveRedEyeIcon className="text-black dark:text-white" />
+                        <RemoveRedEyeIcon className="text-[#37484E] dark:text-[#789987]" />
                     </Link>
                 </div>
-
             </div>
         </div>
     );
