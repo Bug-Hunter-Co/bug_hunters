@@ -3,6 +3,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { AboutSection } from "@/components/features/AboutSection";
 import { HeroSection } from "@/components/features/HeroSection";
 import TeamSection from "@/components/features/TeamSection";
+import { Footer } from "@/components/layout/Footer";
+import { ProjectSection } from "@/components/features/ProjectSection";
 
 
 export default function Home() {
@@ -26,8 +28,9 @@ export default function Home() {
           ]}
         />
         <TeamSection />
+        <ProjectSection />
       </main>
-
+      <Footer />
 
     </div>
   );
