@@ -5,6 +5,8 @@ import { HeroSection } from "@/components/features/HeroSection";
 import TeamSection from "@/components/features/TeamSection";
 import { Footer } from "@/components/layout/Footer";
 import { ProjectSection } from "@/components/features/ProjectSection";
+import { ContactForm } from "@/components/forms/Formulario";
+
 
 
 export default function Home() {
@@ -29,6 +31,7 @@ export default function Home() {
         />
         <TeamSection />
         <ProjectSection />
+        <ContactForm/>
       </main>
       <Footer />
 
