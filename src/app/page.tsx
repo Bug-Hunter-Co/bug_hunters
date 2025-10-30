@@ -24,7 +24,7 @@ export default function Home() {
           stats={[
             { value: "50+", label: "Proyectos realizados" },
             { value: "100%", label: "Satisfacción clientes" },
-            { value: "8+", label: "Años de experiencia" },
+            { value: "8+", label: "Meses de experiencia" },
           ]}
         />
         <TeamSection />

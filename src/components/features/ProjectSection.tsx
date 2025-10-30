@@ -3,7 +3,7 @@ import { font_paragraph, font_title } from "../ui/fonts"
 
 export const ProjectSection = () => {
     return (
-        <section className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
+        <section id="projects" className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
             <div className="flex flex-col gap-8 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 <h1 className={`${font_title.className} text-3xl font-bold dark:text-[#E0E0E0]`}>Proyectos Destacados</h1>
                 <p className="dark:text-[#B0B0B0]">Conoce nuestro trabajo y los resultados que hemos logrado.</p>
