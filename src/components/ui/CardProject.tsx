@@ -21,16 +21,15 @@ export const CardProject = ({
     onClick,
 }: CardProjectProps) => {
     return (
-        <div className={`${font_paragraph.className} flex flex-col overflow-hidden rounded-xl shadow-xs hover:shadow-lg transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E] cursor-pointer`} onClick={onClick}>
+        <div className={`${font_paragraph.className} flex flex-col justify-between overflow-hidden rounded-xl shadow-xs hover:shadow-lg transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E] cursor-pointer`} onClick={onClick}>
             {/* Imagen */}
-            <div className="relative h-56 w-full">
-                <Image
-                    src={srcs[0]}
-                    alt={title}
-                    fill
-                    className="object-cover w-full"
-                />
-            </div>
+            <Image
+                src={srcs[0]}
+                alt={title}
+                height={5000}
+                width={5000}
+                className="object-cover w-full h-auto"
+            />
 
             {/* Contenido */}
             <div className="flex flex-col gap-4 p-4 justify-between bg-[#E5E4E4] dark:bg-[#212121] h-40">
