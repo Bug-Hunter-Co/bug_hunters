@@ -1,7 +1,19 @@
-import { CardProject } from "../ui/CardProject"
-import { font_paragraph, font_title } from "../ui/fonts"
+import { useState } from "react";
+import { CardProject } from "../ui/CardProject";
+import { ModalProject } from "../ui/ModalProject";
+import { font_paragraph, font_title } from "../ui/fonts";
+
+interface Project {
+    title: string;
+    tecnologies: string[];
+    description: string;
+    path: string;
+    srcs: string[];
+}
 
 export const ProjectSection = () => {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
     return (
         <section id="projects" className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
             <div className="flex flex-col gap-8 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
@@ -13,30 +25,50 @@ export const ProjectSection = () => {
                         description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        src="/greenpath/landing.png"
+                        srcs={["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]}
+                        onClick={() => setSelectedProject({
+                            title: "GreenPath",
+                            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
+                            tecnologies: ['Next.js', 'Tailwind', 'MySql'],
+                            path: "https://google.com",
+                            srcs: ["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]
+                        })}
                     />
                     <CardProject
                         title="GreenPath"
-                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' lorem qwrqw qhwujwh qwhuqw wqut qwhjt qhtjqw th qwkjt qkt qhwk tkqw tkqw thkqw kthq wkthqwkt qhtk wqkt qwkthqwk htq wkthqwkt qhw t"
+                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        src="/greenpath/login.png"
+                        srcs={["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]}
+                        onClick={() => setSelectedProject({
+                            title: "GreenPath",
+                            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
+                            tecnologies: ['Next.js', 'Tailwind', 'MySql'],
+                            path: "https://google.com",
+                            srcs: ["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]
+                        })}
                     />
                     <CardProject
                         title="GreenPath"
-                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' lorem qwrqw qhwujwh qwhuqw wqut qwhjt qhtjqw th qwkjt qkt qhwk tkqw tkqw thkqw kthq wkthqwkt qhtk wqkt qwkthqwk htq wkthqwkt qhw t"
+                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        src="/project.webp"
-                    />
-                    <CardProject
-                        title="GreenPath"
-                        description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' lorem qwrqw qhwujwh qwhuqw wqut qwhjt qhtjqw th qwkjt qkt qhwk tkqw tkqw thkqw kthq wkthqwkt qhtk wqkt qwkthqwk htq wkthqwkt qhw t"
-                        tecnologies={['Next.js', 'Tailwind', 'MySql']}
-                        path="https://google.com"
-                        src="/project.webp"
+                        srcs={["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]}
+                        onClick={() => setSelectedProject({
+                            title: "GreenPath",
+                            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
+                            tecnologies: ['Next.js', 'Tailwind', 'MySql'],
+                            path: "https://google.com",
+                            srcs: ["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"]
+                        })}
                     />
                 </div>
+                {selectedProject && (
+                    <ModalProject
+                        {...selectedProject}
+                        onClose={() => setSelectedProject(null)}
+                    />
+                )}
             </div>
         </section>
     )
