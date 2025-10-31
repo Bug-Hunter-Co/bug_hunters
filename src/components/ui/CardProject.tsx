@@ -8,7 +8,8 @@ interface CardProjectProps {
     tecnologies: string[];
     description: string;
     path: string;
-    src: string;
+    srcs: string[];
+    onClick: () => void;
 }
 
 export const CardProject = ({
@@ -16,14 +17,15 @@ export const CardProject = ({
     tecnologies,
     description,
     path,
-    src,
+    srcs,
+    onClick,
 }: CardProjectProps) => {
     return (
-        <div className={`${font_paragraph.className} flex flex-col overflow-hidden rounded-xl shadow-xs hover:shadow-lg transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E]`}>
+        <div className={`${font_paragraph.className} flex flex-col overflow-hidden rounded-xl shadow-xs hover:shadow-lg transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E] cursor-pointer`} onClick={onClick}>
             {/* Imagen */}
             <div className="relative h-56 w-full">
                 <Image
-                    src={src}
+                    src={srcs[0]}
                     alt={title}
                     fill
                     className="object-cover w-full"
