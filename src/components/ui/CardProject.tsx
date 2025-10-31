@@ -26,13 +26,12 @@ export const CardProject = ({
                     src={src}
                     alt={title}
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover w-full"
                 />
             </div>
 
             {/* Contenido */}
-            <div className="flex flex-col gap-4 p-4 justify-between bg-[#E5E4E4] dark:bg-[#212121]">
+            <div className="flex flex-col gap-4 p-4 justify-between bg-[#E5E4E4] dark:bg-[#212121] h-40">
                 <h3 className={`${font_title.className} text-lg font-semibold text-[#2C3E50] dark:text-[#E0E0E0]`}>
                     {title}
                 </h3>

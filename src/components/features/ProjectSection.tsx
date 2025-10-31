@@ -7,20 +7,20 @@ export const ProjectSection = () => {
             <div className="flex flex-col gap-8 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 <h1 className={`${font_title.className} text-3xl font-bold dark:text-[#E0E0E0]`}>Proyectos Destacados</h1>
                 <p className="dark:text-[#B0B0B0]">Conoce nuestro trabajo y los resultados que hemos logrado.</p>
-                <div className="grid max-sm:grid-cols-1 max-md:grid-cols-2 max-xl:grid-cols-3 grid-cols-4 gap-6 w-full">
+                <div className="grid max-sm:grid-cols-1 max-xl:grid-cols-2 grid-cols-3 gap-6 w-full">
                     <CardProject
                         title="GreenPath"
                         description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        src="/project.webp"
+                        src="/greenpath/landing.png"
                     />
                     <CardProject
                         title="GreenPath"
                         description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' lorem qwrqw qhwujwh qwhuqw wqut qwhjt qhtjqw th qwkjt qkt qhwk tkqw tkqw thkqw kthq wkthqwkt qhtk wqkt qwkthqwk htq wkthqwkt qhw t"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        src="/project.webp"
+                        src="/greenpath/login.png"
                     />
                     <CardProject
                         title="GreenPath"
