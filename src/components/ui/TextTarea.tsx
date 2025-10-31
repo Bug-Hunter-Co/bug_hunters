@@ -39,7 +39,7 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
             />
 
             {error && (
-                <p className="text-red-500 text-sm mt-1">{error.message}</p>
+                <p className="text-red-500 text-xs mt-1">{error.message}</p>
             )}
         </div>
     );

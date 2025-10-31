@@ -41,17 +41,17 @@ export const ContactForm = () => {
         {/* Name */}
         <InputField
           id="name"
-          placeholder="Your name"
-          register={register("name", { required: "Name is required" })}
+          placeholder="Tu nombre"
+          register={register("name", { required: "Nombre es requerido" })}
           error={errors.name}
         />
         {/* Email */}
         <InputField
           id="email"
           type="email"
-          placeholder="you@example.com"
+          placeholder="tu@correo.com"
           register={register("email", {
-            required: "Email is required",
+            required: "Email es querido",
             pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
           })}
           error={errors.email}
@@ -62,10 +62,10 @@ export const ContactForm = () => {
       {/* Message */}
       <TextareaField
         id="message"
-        placeholder="Write your message here..."
-        register={register("message", { required: "Message is required" })}
+        placeholder="Deja tu mensaje aqui..."
+        register={register("message", { required: "Mensaje es requerido" })}
         error={errors.message}
-        minHeight="100px"
+        minHeight="150px"
       />
 
       <button
