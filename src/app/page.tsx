@@ -2,7 +2,11 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { AboutSection } from "@/components/features/AboutSection";
 import { HeroSection } from "@/components/features/HeroSection";
-
+import TeamSection from "@/components/features/TeamSection";
+import { Footer } from "@/components/layout/Footer";
+import { ProjectSection } from "@/components/features/ProjectSection";
+import { ContactForm } from "@/components/forms/ContactForm";
+import { FormSection } from "@/components/features/FormSection";
 
 export default function Home() {
   return (
@@ -21,11 +25,14 @@ export default function Home() {
           stats={[
             { value: "50+", label: "Proyectos realizados" },
             { value: "100%", label: "Satisfacción clientes" },
-            { value: "8+", label: "Años de experiencia" },
+            { value: "8+", label: "Meses de experiencia" },
           ]}
         />
+        <TeamSection />
+        <ProjectSection />
+        <FormSection />
       </main>
-
+      <Footer />
 
     </div>
   );
