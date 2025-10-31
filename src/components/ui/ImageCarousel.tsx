@@ -21,62 +21,44 @@ export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
         );
     };
 
-    if (images.length === 1) {
-        return (
-            <Image
-                src={images[0]}
-                alt={alt}
-                width={5000}
-                height={5000}
-                className="object-contain rounded-t-lg"
-            />
-        );
-    }
-
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden w-full h-96">
             <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out w-full h-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {images.map((src, index) => (
-                    <div key={index} className="shrink-0 w-full">
+                    <div key={index} className="relative shrink-0 w-full h-full">
                         <Image
                             src={src}
                             alt={`${alt} - ${index + 1}`}
                             width={5000}
                             height={5000}
-                            className="object-contain rounded-t-lg w-full h-auto"
+                            className="object-cover"
+                            sizes="100vw"
+                            priority={index === 0}
                         />
                     </div>
                 ))}
             </div>
 
-            {/* Navigation buttons */}
-            <button
-                onClick={prevImage}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity"
-            >
-                ‹
-            </button>
-            <button
-                onClick={nextImage}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity"
-            >
-                ›
-            </button>
-
-            {/* Dots indicator */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {images.map((_, index) => (
+            {/* Botones - solo mostrar si hay más de una imagen */}
+            {images.length > 1 && (
+                <>
                     <button
-                        key={index}
-                        onClick={() => setCurrentIndex(index)}
-                        className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'
-                            }`}
-                    />
-                ))}
-            </div>
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition"
+                    >
+                        ‹
+                    </button>
+                    <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition"
+                    >
+                        ›
+                    </button>
+                </>
+            )}
         </div>
     );
 };

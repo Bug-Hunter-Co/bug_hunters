@@ -21,7 +21,7 @@ export const CardProject = ({
     onClick,
 }: CardProjectProps) => {
     return (
-        <div className={`${font_paragraph.className} flex flex-col justify-between overflow-hidden rounded-xl shadow-xs hover:shadow-lg transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E] cursor-pointer`} onClick={onClick}>
+        <div className={`${font_paragraph.className} bg-[#E5E4E4] flex flex-col justify-between overflow-hidden rounded-xl shadow-xs hover:shadow-lg dark:shadow-black/50 transition-shadow duration-300 border border-[#65777B]/40 dark:bg-[#1E1E1E] cursor-pointer`} onClick={onClick}>
             {/* Imagen */}
             <Image
                 src={srcs[0]}
@@ -32,7 +32,7 @@ export const CardProject = ({
             />
 
             {/* Contenido */}
-            <div className="flex flex-col gap-4 p-4 justify-between bg-[#E5E4E4] dark:bg-[#212121] h-40">
+            <div className="flex flex-col gap-4 p-4 justify-between h-40">
                 <h3 className={`${font_title.className} text-lg font-semibold text-[#2C3E50] dark:text-[#E0E0E0]`}>
                     {title}
                 </h3>

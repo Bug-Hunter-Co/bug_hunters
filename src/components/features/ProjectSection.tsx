@@ -53,7 +53,7 @@ export const ProjectSection = () => {
                         description="Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion"
                         tecnologies={['Next.js', 'Tailwind', 'MySql']}
                         path="https://google.com"
-                        srcs={["/logo_black.png"]}
+                        srcs={["/project.webp"]}
                         onClick={() => setSelectedProject({
                             title: "GreenPath",
                             description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",

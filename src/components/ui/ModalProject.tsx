@@ -25,14 +25,16 @@ export const ModalProject = ({
             onClick={onClose}
         >
             <div
-                className="relative max-w-4xl w-full mx-4 max-h-[90vh]"
+                className="relative max-w-4xl w-full mx-4 max-h-[90vh] bg-white dark:bg-[#1E1E1E] rounded-lg shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Carrusel de Imágenes */}
-                <ImageCarousel images={srcs} alt={title} />
+                <div className="rounded-t-lg overflow-hidden">
+                    <ImageCarousel images={srcs} alt={title} />
+                </div>
 
                 {/* Overlay con la info del proyecto */}
-                <div className="bottom-0 left-0 right-0 dark:bg-[#1E1E1E] bg-[#E5E4E4] text-[#2C3E50] dark:text-[#E0E0E0] p-4 rounded-b-lg">
+                <div className="dark:bg-[#1E1E1E] bg-[#E5E4E4] text-[#2C3E50] dark:text-[#E0E0E0] p-4 rounded-b-lg">
                     {/* Título y botón */}
                     <div className="flex justify-between mb-4">
                         <h2 className={`${font_title.className} text-xl font-bold mb-2`}>
@@ -41,7 +43,7 @@ export const ModalProject = ({
                         <Link
                             href={path}
                             target="_blank"
-                            className="inline-block px-3 h-fit py-1 bg-[#2C3E50] dark:bg-[#789987]/50 text-white rounded hover:scale-105 transition-transform text-sm"
+                            className="px-3 h-fit py-1 bg-[#2C3E50] dark:bg-[#789987]/50 text-white rounded hover:scale-105 transition-transform text-sm"
                         >
                             Sitio web
                         </Link>
