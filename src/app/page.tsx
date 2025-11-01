@@ -1,11 +1,11 @@
 'use client'
 import { Navbar } from "@/components/layout/Navbar";
-import { AboutSection } from "@/components/features/AboutSection";
 import { HeroSection } from "@/components/features/HeroSection";
-import TeamSection from "@/components/features/TeamSection";
-import { Footer } from "@/components/layout/Footer";
+import { AboutSection } from "@/components/features/AboutSection";
+import { TeamSection } from "@/components/features/TeamSection";
 import { ProjectSection } from "@/components/features/ProjectSection";
 import { FormSection } from "@/components/features/FormSection";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (

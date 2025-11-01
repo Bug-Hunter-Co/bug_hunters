@@ -1,6 +1,6 @@
 import styles from "@/styles/scroll.module.css";
 import Image, { StaticImageData } from "next/image";
-import { font_paragraph, font_title } from "../ui/fonts";
+import { font_paragraph, font_title } from "../../styles/fonts";
 import { useReveal } from "@/utils/useReveal";
 
 interface stat {

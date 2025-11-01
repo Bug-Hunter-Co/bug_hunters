@@ -1,4 +1,4 @@
-import { font_paragraph, font_title } from "../ui/fonts"
+import { font_paragraph, font_title } from "../../styles/fonts"
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

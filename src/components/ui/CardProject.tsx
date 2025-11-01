@@ -1,20 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { font_paragraph, font_title } from "./fonts";
+import { font_paragraph, font_title } from "../../styles/fonts";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import styles from "@/styles/scroll.module.css";
-
-interface CardProjectProps {
-    title: string;
-    tecnologies: string[];
-    description: string;
-    path: string;
-    srcs: string[];
-    onClick: () => void;
-    index?: number;
-    visible?: boolean; //  Recibe el visible desde el padre
-}
+import { CardProjectProps } from "@/types/CardProject";
 
 export const CardProject = ({
     title,

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ButtonMode } from "../ui/ButtonMode";
-import { font_title } from "../ui/fonts";
+import { font_title } from "../../styles/fonts";
 import Link from "next/link";
 import { useTheme } from "@/utils/ThemeProvider";
 import { useEffect, useState } from "react";
@@ -49,9 +49,9 @@ export const Navbar = () => {
             className={`${font_title.className} max-sm:h-18 z-50 flex rounded-xl mt-10 py-4 px-10 max-md:px-5 w-7/10 max-xl:w-8/10 max-lg:w-9/10 max-md:w-full max-md:rounded-none max-md:mt-0 items-center justify-between bg-[#FDF8F4] dark:bg-[#2A2A2A] fixed`}
         >
             {theme === "light" ? (
-                <Image src={"/logo_black.png"} alt="icon" width={50} height={50} />
+                <Image src={"/logo_black.png"} alt="icon" width={50} height={50} style={{ width: 'auto', height: 'auto' }} />
             ) : (
-                <Image src={"/logo_white.png"} alt="icon" width={50} height={50} />
+                <Image src={"/logo_white.png"} alt="icon" width={50} height={50} style={{ width: 'auto', height: 'auto' }} />
             )}
             <div className="flex max-sm:hidden backdrop-blur-sxl gap-16 max-xl:gap-10 max-lg:gap-4 max-md:gap-3">
                 {NAVBAR_LINKS.map((item, index) => {

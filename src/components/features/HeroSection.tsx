@@ -1,5 +1,5 @@
 import React from 'react'
-import { font_paragraph,font_title } from '../ui/fonts'
+import { font_paragraph,font_title } from '../../styles/fonts'
 import Image from 'next/image'
 
 export const HeroSection = () => {

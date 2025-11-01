@@ -1,4 +1,4 @@
-import { font_title } from "../ui/fonts"
+import { font_title } from "../../styles/fonts"
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {

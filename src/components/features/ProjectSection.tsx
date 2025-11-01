@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { CardProject } from "../ui/CardProject";
 import { ModalProject } from "../ui/ModalProject";
-import { font_paragraph, font_title } from "../ui/fonts";
+import { font_paragraph, font_title } from "../../styles/fonts";
 
 interface Project {
     title: string;

@@ -3,21 +3,16 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
-import InputField from "../ui/InputField";
-import TextareaField from "../ui/TextTarea";
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
+import { TextareaField } from "../ui/TextTarea";
+import { InputField } from "../ui/InputField";
+import { FormDataProps } from "@/types/FormData";
 
 export const ContactForm = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormDataProps>();
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState<string | null>(null);
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (data: FormDataProps) => {
     setLoading(true);
     setResponseMessage(null);
     try {

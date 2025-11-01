@@ -1,10 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-
-interface ImageCarouselProps {
-    images: string[];
-    alt: string;
-}
+import { ImageCarouselProps } from "@/types/ImageCarouselProps";
 
 export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
