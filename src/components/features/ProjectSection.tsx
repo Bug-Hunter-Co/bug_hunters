@@ -1,16 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { Project } from "@/types/Project";
+import { projects } from "@/lib/constants";
 import { CardProject } from "../ui/CardProject";
 import { ModalProject } from "../ui/ModalProject";
-import { font_paragraph, font_title } from "../ui/fonts";
-
-interface Project {
-    title: string;
-    tecnologies: string[];
-    description: string;
-    path: string;
-    srcs: string[];
-}
+import { useState, useEffect, useRef } from "react";
+import { font_paragraph, font_title } from "../../styles/fonts";
 
 export const ProjectSection = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -36,30 +30,6 @@ export const ProjectSection = () => {
         observer.observe(element);
         return () => observer.disconnect();
     }, []);
-
-    const projects: Project[] = [
-        {
-            title: "GreenPath",
-            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-            tecnologies: ["Next.js", "Tailwind", "MySql"],
-            path: "https://google.com",
-            srcs: ["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"],
-        },
-        {
-            title: "GreenPath",
-            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-            tecnologies: ["Next.js", "Tailwind", "MySql"],
-            path: "https://google.com",
-            srcs: ["/greenpath/landin.png", "/greenpath/login.png", "/greenpath/register.png", "/greenpath/dashboard.png"],
-        },
-        {
-            title: "GreenPath",
-            description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-            tecnologies: ["Next.js", "Tailwind", "MySql"],
-            path: "https://google.com",
-            srcs: ["/project.webp"],
-        },
-    ];
 
     return (
         <section

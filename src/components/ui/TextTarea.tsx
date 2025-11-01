@@ -1,19 +1,7 @@
 import React from "react";
-import { FieldError, UseFormRegisterReturn } from "react-hook-form";
+import { TextareaFieldProps } from "@/types/TextareaFieldProps";
 
-interface TextareaFieldProps {
-    label?: string;
-    id: string;
-    placeholder?: string;
-    register: UseFormRegisterReturn;
-    error?: FieldError;
-    className?: string;
-    labelClassName?: string;
-    containerClassName?: string;
-    minHeight?: string;
-}
-
-const TextareaField: React.FC<TextareaFieldProps> = ({
+export const TextareaField: React.FC<TextareaFieldProps> = ({
     label,
     id,
     placeholder,
@@ -44,5 +32,3 @@ const TextareaField: React.FC<TextareaFieldProps> = ({
         </div>
     );
 };
-
-export default TextareaField;
