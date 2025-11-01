@@ -1,5 +1,7 @@
+import styles from "@/styles/scroll.module.css";
 import Image, { StaticImageData } from "next/image";
 import { font_paragraph, font_title } from "../ui/fonts";
+import { useReveal } from "@/utils/useReveal";
 
 interface stat {
     value: string;
@@ -19,11 +21,21 @@ export const AboutSection = ({
     paragraphs,
     stats,
 }: AboutSectionProps) => {
+    const { ref: imgRef, visible: imgVisible } = useReveal();
+    const { ref: textRef, visible: textVisible } = useReveal();
+    const { ref: paraRef, visible: paraVisible } = useReveal(); // 👈 hook para párrafos
+
     return (
-        <section id="aboutMe" className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
+        <section
+            id="aboutMe"
+            className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
+        >
             <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 {/* Imagen */}
-                <div className=" flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl">
+                <div
+                    ref={imgRef}
+                    className={`${styles.imageReveal} ${imgVisible ? styles.visible : ""} flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl`}
+                >
                     <Image
                         src={image}
                         alt={title}
@@ -34,13 +46,22 @@ export const AboutSection = ({
                 </div>
 
                 <div>
-                    <h2 className={`${font_title.className} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}>
+                    <h2
+                        ref={textRef}
+                        className={`${font_title.className} ${styles.titleReveal} ${textVisible ? styles.visible : ""} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
+                    >
                         {title}
                     </h2>
 
-                    <div className='space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0]'>
+                    <div className="space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0]">
                         {paragraphs.map((p, i) => (
-                            <p key={i}>{p}</p>
+                            <p
+                                key={i}
+                                ref={i === 0 ? paraRef : null} // 👈 puedes hacer que todos tengan uno propio si quieres
+                                className={`${styles.paragraphReveal} ${paraVisible ? styles.visible : ""}`}
+                            >
+                                {p}
+                            </p>
                         ))}
                     </div>
 
@@ -56,4 +77,4 @@ export const AboutSection = ({
             </div>
         </section>
     );
-}
+};
