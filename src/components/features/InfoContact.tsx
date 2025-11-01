@@ -1,10 +1,9 @@
-import { font_paragraph, font_title } from "../ui/fonts"
+import { AiFillTikTok } from "react-icons/ai";
 import EmailIcon from '@mui/icons-material/Email';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { AiFillTikTok } from "react-icons/ai";
-
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { font_paragraph, font_title } from "../../styles/fonts"
 
 export const InfoContact = () => {
     return (
