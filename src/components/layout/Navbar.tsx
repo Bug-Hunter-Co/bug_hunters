@@ -1,47 +1,39 @@
 "use client";
-
-import Image from "next/image";
-import { ButtonMode } from "../ui/ButtonMode";
-import { font_title } from "../../styles/fonts";
 import Link from "next/link";
-import { useTheme } from "@/utils/ThemeProvider";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-
-const NAVBAR_LINKS = [
-    { href: "#inicio", text: "inicio" },
-    { href: "#aboutMe", text: "nosotros" },
-    { href: "#teamSection", text: "equipo" },
-    { href: "#projects", text: "proyectos" },
-    { href: "#contact", text: "contacto" },
-];
+import { ButtonMode } from "../ui/ButtonMode";
+import { NAVBAR_LINKS } from "@/lib/constants";
+import { font_title } from "../../styles/fonts";
+import { useTheme } from "@/utils/ThemeProvider";
 
 export const Navbar = () => {
     const { theme } = useTheme();
     const [activeSection, setActiveSection] = useState("inicio");
 
     useEffect(() => {
-    const handleScroll = () => {
-        let current = "";
-        const sections = document.querySelectorAll("section[id]");
-        const offset = 100; // 👈 compensación por el navbar o margen superior
+        const handleScroll = () => {
+            let current = "";
+            const sections = document.querySelectorAll("section[id]");
+            const offset = 100; // 👈 compensación por el navbar o margen superior
 
-        sections.forEach((section) => {
-            const el = section as HTMLElement;
-            const sectionTop = el.offsetTop - offset; // ✅ aplicamos el desplazamiento
-            const sectionHeight = el.clientHeight;
+            sections.forEach((section) => {
+                const el = section as HTMLElement;
+                const sectionTop = el.offsetTop - offset; // ✅ aplicamos el desplazamiento
+                const sectionHeight = el.clientHeight;
 
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                current = el.getAttribute("id") || "";
-            }
-        });
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = el.getAttribute("id") || "";
+                }
+            });
 
-        setActiveSection(current);
-    };
+            setActiveSection(current);
+        };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // ejecuta al cargar
-    return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // ejecuta al cargar
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
     return (

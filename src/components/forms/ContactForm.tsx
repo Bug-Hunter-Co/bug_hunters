@@ -1,10 +1,9 @@
 "use client";
-
-import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
-import { TextareaField } from "../ui/TextTarea";
+import { useForm } from "react-hook-form";
 import { InputField } from "../ui/InputField";
+import { TextareaField } from "../ui/TextTarea";
 import { FormDataProps } from "@/types/FormData";
 
 export const ContactForm = () => {

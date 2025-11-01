@@ -1,5 +1,5 @@
+import { contactFooter, iconFooter } from "@/lib/constants";
 import { font_title } from "../../styles/fonts"
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
     return (
@@ -14,31 +14,27 @@ export const Footer = () => {
                     </div>
                 </div>
 
-
                 <div className="flex flex-col gap-2">
                     <div>
                         <h3 className="font-bold">Enlaces</h3>
                         <ul className="flex flex-col gap-1.5 pt-1.5 text-sm">
-                            <li className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">Nosotros</li>
-                            <li className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">Proyectos</li>
-                            <li className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">Contáctanos</li>
+                            {
+                                contactFooter.map((item, index) => (
+                                    <li key={index} className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">{item}</li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
 
-
                 <div className="flex flex-col gap-3 p-6 max-md:p-0">
                     <h2 className="font-semibold">Síguenos</h2>
                     <div className="flex gap-3">
-                        <div className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
-                            <FaGithub size={24} />
-                        </div>
-                        <div className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
-                            <FaLinkedin size={24} />
-                        </div>
-                        <div className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
-                            <FaEnvelope size={24} />
-                        </div>
+                        {iconFooter.map((Icon, index) => (
+                            <div className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
+                                <Icon key={index} size={24} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

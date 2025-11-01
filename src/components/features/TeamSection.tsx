@@ -1,6 +1,5 @@
-import React from 'react'
-import { font_paragraph, font_title } from '../../styles/fonts'
 import { CardsSection } from '../ui/CardTeam'
+import { font_paragraph, font_title } from '../../styles/fonts'
 
 export const TeamSection = () => {
     return (

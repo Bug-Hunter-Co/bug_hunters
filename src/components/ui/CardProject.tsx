@@ -1,10 +1,10 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { font_paragraph, font_title } from "../../styles/fonts";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import Image from "next/image";
 import styles from "@/styles/scroll.module.css";
 import { CardProjectProps } from "@/types/CardProject";
+import { font_paragraph, font_title } from "../../styles/fonts";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 export const CardProject = ({
     title,

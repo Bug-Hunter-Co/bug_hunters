@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import styles from "@/styles/scroll.module.css";
 import { cardsTeam } from "@/lib/constants";
 import { CardProps } from "@/types/CardTeam";
+import styles from "@/styles/scroll.module.css";
+import { useEffect, useRef, useState } from "react";
 
 export function Card({ icon, title, text, index, visible }: CardProps) {
     return (

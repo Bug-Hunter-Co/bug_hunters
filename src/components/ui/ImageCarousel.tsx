@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 import { ImageCarouselProps } from "@/types/ImageCarouselProps";
 
 export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {

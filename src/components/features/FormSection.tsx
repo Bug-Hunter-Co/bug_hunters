@@ -1,6 +1,6 @@
+import { InfoContact } from "./InfoContact"
 import { ContactForm } from "../forms/ContactForm"
 import { font_paragraph, font_title } from "../../styles/fonts"
-import { InfoContact } from "./InfoContact"
 
 export const FormSection = () => {
     return (
