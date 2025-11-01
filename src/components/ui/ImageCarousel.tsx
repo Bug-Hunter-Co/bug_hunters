@@ -22,7 +22,7 @@ export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
     };
 
     return (
-        <div className="relative overflow-hidden w-full h-96">
+        <div className="relative overflow-hidden w-full max-h-96 max-lg:h-90 max-md:h-74 max-sm:h-60 max-[550]:h-53! max-[450px]:h-45! max-[390px]:h-40!">
             <div
                 className="flex transition-transform duration-500 ease-in-out w-full h-full"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
