@@ -35,7 +35,9 @@ export const ModalProject = ({
                         <Link
                             href={path}
                             target="_blank"
-                            className="px-3 items-center hover:scale-105 transition-transform"
+                            rel="noopener noreferrer"
+                            className="px-3 items-center hover:scale-105 transition-transform min-h-[44px] min-w-[44px] flex items-center justify-center"
+                            aria-label={`Ver proyecto ${title} en nueva pestaña`}
                         >
                             <EyeIcon className="text-[#37484E] dark:text-[#789987]" />
                         </Link>

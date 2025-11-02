@@ -17,13 +17,15 @@ export const Footer = () => {
                 <div className="flex flex-col gap-2">
                     <div>
                         <h3 className="font-bold">Enlaces</h3>
-                        <ul className="flex flex-col gap-1.5 pt-1.5 text-sm">
-                            {
-                                contactFooter.map((item, index) => (
-                                    <li key={index} className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">{item}</li>
-                                ))
-                            }
-                        </ul>
+                        <nav aria-label="Enlaces del footer">
+                            <ul className="flex flex-col gap-1.5 pt-1.5 text-sm">
+                                {
+                                    contactFooter.map((item, index) => (
+                                        <li key={index} className="cursor-pointer hover:text-[#43565e] dark:hover:text-white transition-colors">{item}</li>
+                                    ))
+                                }
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 
