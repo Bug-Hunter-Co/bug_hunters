@@ -82,7 +82,8 @@ export const ContactForm = ({ visible = false, startIndex = 0 }: ContactFormProp
         <button
           type="submit"
           disabled={loading}
-          className="dark:bg-[#519872] bg-[#37484E] w-fit p-4 text-white py-2 rounded-md hover:scale-103 cursor-pointer transition-all disabled:bg-blue-400"
+          className="dark:bg-[#519872] bg-[#37484E] w-fit p-4 text-white py-2 rounded-md hover:scale-105 cursor-pointer transition-all disabled:bg-blue-400 min-h-[44px] min-w-[44px] flex items-center justify-center"
+          aria-label={loading ? "Enviando mensaje" : "Enviar mensaje de contacto"}
         >
           {loading ? "Enviando mensaje..." : "Enviar mensaje"}
         </button>

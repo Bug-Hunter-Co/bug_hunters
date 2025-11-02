@@ -24,10 +24,12 @@ export const AboutSection = () => {
                 >
                     <Image
                         src={"/greenpath/landin.png"}
-                        alt="Sobre BugHunter"
-                        width={5000}
-                        height={5000}
+                        alt="Sobre BugHunter - Equipo de desarrollo web apasionado"
+                        width={500}
+                        height={500}
                         className="object-cover rounded-lg w-full"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
                     />
                 </div>
 
