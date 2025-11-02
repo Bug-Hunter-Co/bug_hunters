@@ -5,8 +5,15 @@ import { useForm } from "react-hook-form";
 import { InputField } from "../ui/InputField";
 import { TextareaField } from "../ui/TextTarea";
 import { FormDataProps } from "@/types/FormData";
+import styles from "@/styles/scroll.module.css";
+import { font_paragraph } from "@/styles/fonts";
 
-export const ContactForm = () => {
+interface ContactFormProps {
+  visible?: boolean;      // recibe si el formulario está visible
+  startIndex?: number;    // índice base para calcular delays
+}
+
+export const ContactForm = ({ visible = false, startIndex = 0 }: ContactFormProps) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormDataProps>();
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState<string | null>(null);
@@ -26,6 +33,9 @@ export const ContactForm = () => {
     }
   };
 
+  // helper para generar estilo de delay por índice
+  const delayStyle = (index: number) => ({ transitionDelay: `${(startIndex + index) * 0.14}s` });
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -33,48 +43,58 @@ export const ContactForm = () => {
     >
       <div className="flex gap-8 w-full justify-between max-sm:flex-col">
         {/* Name */}
-        <InputField
-          id="name"
-          placeholder="Tu nombre"
-          register={register("name", { required: "Nombre es requerido" })}
-          error={errors.name}
-        />
+        <div className={`${styles.cardReveal} ${visible ? styles.visible : ""} w-full`} style={delayStyle(0)}>
+          <InputField
+            id="name"
+            placeholder="Tu nombre"
+            register={register("name", { required: "Nombre es requerido" })}
+            error={errors.name}
+          />
+        </div>
+
         {/* Email */}
-        <InputField
-          id="email"
-          type="email"
-          placeholder="tu@correo.com"
-          register={register("email", {
-            required: "Email es querido",
-            pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
-          })}
-          error={errors.email}
+        <div className={`${styles.cardReveal} ${visible ? styles.visible : ""} w-full`} style={delayStyle(1)}>
+          <InputField
+            id="email"
+            type="email"
+            placeholder="tu@correo.com"
+            register={register("email", {
+              required: "Email es querido",
+              pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
+            })}
+            error={errors.email}
+          />
+        </div>
+      </div>
+
+      {/* Message */}
+      <div className={`${styles.cardReveal} ${visible ? styles.visible : ""}`} style={delayStyle(2)}>
+        <TextareaField
+          id="message"
+          placeholder="Deja tu mensaje aqui..."
+          register={register("message", { required: "Mensaje es requerido" })}
+          error={errors.message}
+          minHeight="150px"
         />
       </div>
 
-
-      {/* Message */}
-      <TextareaField
-        id="message"
-        placeholder="Deja tu mensaje aqui..."
-        register={register("message", { required: "Mensaje es requerido" })}
-        error={errors.message}
-        minHeight="150px"
-      />
-
-      <button
-        type="submit"
-        disabled={loading}
-        className="dark:bg-[#519872] bg-[#37484E] w-fit p-4 text-white py-2 rounded-md hover:scale-103 cursor-pointer transition-all disabled:bg-blue-400"
-      >
-        {loading ? "Enviando mensaje..." : "Enviar mensaje"}
-      </button>
+      <div className={`${styles.cardReveal} ${visible ? styles.visible : ""}`} style={delayStyle(3)}>
+        <button
+          type="submit"
+          disabled={loading}
+          className="dark:bg-[#519872] bg-[#37484E] w-fit p-4 text-white py-2 rounded-md hover:scale-103 cursor-pointer transition-all disabled:bg-blue-400"
+        >
+          {loading ? "Enviando mensaje..." : "Enviar mensaje"}
+        </button>
+      </div>
 
       {responseMessage && (
-        <p className="text-center mt-2 text-sm text-gray-700 dark:text-gray-300">
-          {responseMessage}
-        </p>
+        <div className={`${styles.cardReveal} ${visible ? styles.visible : ""}`} style={delayStyle(4)}>
+          <p className="text-center mt-2 text-sm text-gray-700 dark:text-gray-300">
+            {responseMessage}
+          </p>
+        </div>
       )}
     </form>
   );
-}
+};

@@ -6,7 +6,8 @@ import { font_paragraph, font_title } from "../../styles/fonts";
 
 export const AboutSection = () => {
     const { ref: textRef, visible: textVisible } = useReveal();
-    const { ref: paraRef, visible: paraVisible } = useReveal(); // 👈 hook para párrafos
+    const { ref: paraRef, visible: paraVisible } = useReveal();
+    const { ref: imgRef, visible: imgVisible } = useReveal(); //  nuevo hook para la imagen
 
     return (
         <section
@@ -14,20 +15,28 @@ export const AboutSection = () => {
             className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
         >
             <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
-                {/* Imagen */}
-                <div className="w-full max-md:order-1">
+                {/* Imagen con efecto reveal */}
+                <div
+                    ref={imgRef}
+                    className={`w-full max-md:order-1 ${styles.titleReveal} ${imgVisible ? styles.visible : ""
+                        }`}
+                    style={{ transitionDelay: "0.2s" }} // pequeño delay para que entre suave
+                >
                     <Image
-                        src={'/greenpath/landin.png'}
-                        alt='Sobre BugHunter'
+                        src={"/greenpath/landin.png"}
+                        alt="Sobre BugHunter"
                         width={5000}
                         height={5000}
                         className="object-cover rounded-lg w-full"
                     />
                 </div>
+
+                {/* Texto */}
                 <div className="w-full">
                     <h2
                         ref={textRef}
-                        className={`${font_title.className} ${styles.titleReveal} ${textVisible ? styles.visible : ""} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
+                        className={`${font_title.className} ${styles.titleReveal} ${textVisible ? styles.visible : ""
+                            } text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
                     >
                         Sobre BugHunter
                     </h2>
@@ -36,8 +45,9 @@ export const AboutSection = () => {
                         {paragraphsAbout.map((p, i) => (
                             <p
                                 key={i}
-                                ref={i === 0 ? paraRef : null} // 👈 puedes hacer que todos tengan uno propio si quieres
-                                className={`${styles.paragraphReveal} ${paraVisible ? styles.visible : ""}`}
+                                ref={i === 0 ? paraRef : null}
+                                className={`${styles.paragraphReveal} ${paraVisible ? styles.visible : ""
+                                    }`}
                             >
                                 {p}
                             </p>

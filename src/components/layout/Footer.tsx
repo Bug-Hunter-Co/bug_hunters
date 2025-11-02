@@ -31,8 +31,8 @@ export const Footer = () => {
                     <h2 className="font-semibold">Síguenos</h2>
                     <div className="flex gap-3">
                         {iconFooter.map((Icon, index) => (
-                            <div className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
-                                <Icon key={index} size={24} />
+                            <div key={index} className="p-2 border border-gray-400 dark:border-stone-500 rounded-md text-gray-600 dark:text-stone-300 hover:text-gray-800 dark:hover:text-white hover:border-gray-600 dark:hover:border-stone-300 cursor-pointer transition">
+                                <Icon size={24} />
                             </div>
                         ))}
                     </div>
@@ -45,7 +45,5 @@ export const Footer = () => {
                 <p className="mt-1 sm:mt-0">Innovación y confianza en cada línea de código</p>
             </div>
         </footer>
-
-
     )
 }
