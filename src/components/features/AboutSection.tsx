@@ -1,51 +1,65 @@
-import Image, { StaticImageData } from "next/image";
-import { font_paragraph, font_title } from "../ui/fonts";
+import Image from "next/image";
+import { useReveal } from "@/utils/useReveal";
+import styles from "@/styles/scroll.module.css";
+import { paragraphsAbout, statsAbout } from "@/lib/constants";
+import { font_paragraph, font_title } from "../../styles/fonts";
 
-interface stat {
-    value: string;
-    label: string;
-}
+export const AboutSection = () => {
+    const { ref: textRef, visible: textVisible } = useReveal();
+    const { ref: paraRef, visible: paraVisible } = useReveal();
+    const { ref: imgRef, visible: imgVisible } = useReveal(); //  nuevo hook para la imagen
 
-interface AboutSectionProps {
-    image: StaticImageData | string;
-    title: string;
-    paragraphs: string[];
-    stats: stat[];
-}
-
-export const AboutSection = ({
-    image,
-    title,
-    paragraphs,
-    stats,
-}: AboutSectionProps) => {
     return (
-        <section id="aboutMe" className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`} >
+        <section
+            id="aboutMe"
+            className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
+        >
             <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
-                {/* Imagen */}
-                <div className=" flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl">
+                {/* Imagen con efecto reveal */}
+                <div
+                    ref={imgRef}
+                    className={`w-full max-md:order-1 ${styles.titleReveal} ${imgVisible ? styles.visible : ""
+                        }`}
+                    style={{ transitionDelay: "0.2s" }} // pequeño delay para que entre suave
+                >
                     <Image
-                        src={image}
-                        alt={title}
+                        src={"/greenpath/landin.png"}
+                        alt="Sobre BugHunter - Equipo de desarrollo web apasionado"
                         width={500}
                         height={500}
-                        className="object-cover rounded-md py-20"
+                        className="object-cover rounded-lg w-full"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
                     />
                 </div>
 
-                <div>
-                    <h2 className={`${font_title.className} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}>
-                        {title}
+                {/* Texto */}
+                <div className="w-full">
+                    <h2
+                        ref={textRef}
+                        className={`${font_title.className} ${styles.titleReveal} ${textVisible ? styles.visible : ""
+                            } text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
+                    >
+                        Sobre BugHunter
                     </h2>
 
-                    <div className='space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0]'>
-                        {paragraphs.map((p, i) => (
-                            <p key={i}>{p}</p>
+                    <div className="space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0]">
+                        {paragraphsAbout.map((p, i) => (
+                            <p
+                                key={i}
+                                ref={i === 0 ? paraRef : null}
+                                className={`${styles.paragraphReveal} ${paraVisible ? styles.visible : ""
+                                    }`}
+                            >
+                                {p}
+                            </p>
                         ))}
                     </div>
 
                     <div className="flex flex-wrap gap-10 mt-10">
-                        {stats.map((s, i) => (
+                        {statsAbout.map((s, i) => (
                             <div key={i}>
                                 <p className="text-2xl font-extrabold text-[#519872]">{s.value}</p>
                                 <p className="text-sm text-gray-500">{s.label}</p>
@@ -56,4 +70,4 @@ export const AboutSection = ({
             </div>
         </section>
     );
-}
+};

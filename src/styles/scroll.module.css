@@ -1,0 +1,53 @@
+.titleReveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.titleReveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageReveal {
+    opacity: 0;
+    filter: saturate(0) contrast(4) brightness(.1) blur(5);
+    transform: scale(0.95) translateY(4rem);
+    transition: all .9s ease-out;
+}
+
+.imageReveal.visible {
+    opacity: 1;
+    filter: none;
+    transform: scale(1) translateY(0);
+}
+
+
+/* Paragraph reveal from left */
+.paragraphReveal {
+    opacity: 0;
+    transform: translateX(-20px);
+    filter: blur(8px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out, filter 0.9s ease-out;
+}
+
+.paragraphReveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+
+/* Cards reveal with stagger effect */
+.cardReveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
+}
+
+.cardReveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}

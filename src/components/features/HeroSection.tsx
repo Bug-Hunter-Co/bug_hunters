@@ -1,6 +1,6 @@
-import React from 'react'
-import { font_paragraph,font_title } from '../ui/fonts'
+import Link from 'next/link'
 import Image from 'next/image'
+import { font_paragraph, font_title } from '../../styles/fonts'
 
 export const HeroSection = () => {
     return (
@@ -8,19 +8,27 @@ export const HeroSection = () => {
             <div className='flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center'>
                 <div className='text-gray-900 mb-6 w-full dark:text-[#E0E0E0] flex flex-col gap-8 max-lg:text-center max-md:items-center'>
                     <h1 className={`${font_title.className} text-4xl font-extrabold`}>Transforma tu vision en realidad digital</h1>
-                    <p>XXXXXXXXXXXX</p>
+                    <p>Únete a nosotros y forma parte de un equipo dinámico, donde la innovación, la creatividad y el trabajo en equipo son la clave para alcanzar el éxito. ¡Si tienes una idea, nosotros la hacemos realidad!</p>
                     <div className='flex gap-8 font-bold max-lg:text-sm max-xl:gap-6'>
-                        <button className='cursor-pointer bg-[#37484E] px-8 py-4 rounded-lg text-white dark:bg-[#789987] max-xl:px-6 hover:scale-103'>Comienza ahora</button>
-                        <button className='cursor-pointer border-2 border-[#37484E] text-[#37484E] rounded-lg px-8 max-xl:px-6 py-4 dark:border-[#789987] dark:text-[#789987] hover:scale-103'>Ver proyectos</button>
+                        <Link href="#contact" aria-label="Ir a la sección de contacto para comenzar un proyecto">
+                            <button className='cursor-pointer bg-[#37484E] px-8 py-4 rounded-lg text-white dark:bg-[#789987] max-xl:px-6 hover:scale-105 transition-transform min-h-[44px] min-w-[44px]'>Comienza ahora</button>
+                        </Link>
+                        <Link href="#projects" aria-label="Ver nuestros proyectos realizados">
+                            <button className='cursor-pointer border-2 border-[#37484E] text-[#37484E] rounded-lg px-8 max-xl:px-6 py-4 dark:border-[#789987] dark:text-[#789987] hover:scale-105 transition-transform min-h-[44px] min-w-[44px]'>Ver proyectos</button>
+                        </Link>
                     </div>
                 </div>
-                <div className="flex justify-center items-center w-full bg-[#f8faf7] p-16 rounded-xl">
+                <div className="flex justify-center items-center w-full rounded-xl">
                     <Image
-                        src={'/icon.png'}
-                        alt={'hola'}
+                        src={'/greenpath/landin.png'}
+                        alt={'Transforma tu visión en realidad digital con Bug Hunters'}
                         width={500}
                         height={500}
-                        className="object-cover rounded-md py-20"
+                        className="object-cover rounded-lg w-full"
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+IRjWjBqO6O2mhP//Z"
                     />
                 </div>
             </div>

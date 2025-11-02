@@ -1,19 +1,6 @@
-import React from "react";
-import { FieldError, UseFormRegisterReturn } from "react-hook-form";
+import { InputFieldProps } from "@/types/InputFieldProps";
 
-interface InputFieldProps {
-    label?: string;
-    id: string;
-    type?: string;
-    placeholder?: string;
-    register: UseFormRegisterReturn;
-    error?: FieldError;
-    className?: string;
-    labelClassName?: string;
-    containerClassName?: string;
-}
-
-const InputField: React.FC<InputFieldProps> = ({
+export const InputField = ({
     label,
     id,
     type = "text",
@@ -23,7 +10,7 @@ const InputField: React.FC<InputFieldProps> = ({
     className = "",
     labelClassName = "",
     containerClassName = "",
-}) => {
+}: InputFieldProps) => {
     return (
         <div className={`flex flex-col w-full ${containerClassName}`}>
             <label htmlFor={id} className={`font-medium mb-1 ${labelClassName}`}>
@@ -45,4 +32,3 @@ const InputField: React.FC<InputFieldProps> = ({
     );
 };
 
-export default InputField;
