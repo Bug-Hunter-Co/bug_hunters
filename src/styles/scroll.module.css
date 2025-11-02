@@ -26,7 +26,7 @@
 /* Paragraph reveal from left */
 .paragraphReveal {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-20px);
     filter: blur(8px);
     transition: opacity 0.9s ease-out, transform 0.9s ease-out, filter 0.9s ease-out;
 }
