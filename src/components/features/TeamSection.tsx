@@ -3,6 +3,8 @@ import { CardsSection } from '../ui/CardTeam';
 import { font_paragraph, font_title } from '../../styles/fonts';
 import { useReveal } from '@/utils/useReveal';
 import styles from '@/styles/scroll.module.css';
+import LogoSlider from '../ui/LogoSlider';
+
 
 export const TeamSection = () => {
     const { ref: titleRef, visible: titleVisible } = useReveal(0.5);
@@ -21,7 +23,6 @@ export const TeamSection = () => {
                 >
                     Nuestro equipo
                 </h2>
-
                 {/* Párrafo animado */}
                 <p
                     ref={paragraphRef}
@@ -29,7 +30,7 @@ export const TeamSection = () => {
                 >
                     Talentos dedicados a crear soluciones web innovadoras y de clase mundial
                 </p>
-
+                {/* Cartas de presentacion */}
                 <CardsSection />
             </div>
         </section>
