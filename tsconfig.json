@@ -25,6 +25,22 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@images/*": [
+        "./src/lib/images/*"
+      ],
+      // Archivo directo
+      "@constants": [
+        "./src/lib/constants"
+      ],
+      "@types": [
+        "./src/types"
+      ],
+      "@ui": [
+        "./src/components/ui"
+      ],
+      "@features": [
+        "./src/components/features"
       ]
     }
   },

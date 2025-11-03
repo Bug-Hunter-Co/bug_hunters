@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { useReveal } from "@/utils/useReveal";
 import styles from "@/styles/scroll.module.css";
-import { paragraphsAbout, statsAbout } from "@/lib/constants";
-import { font_paragraph, font_title } from "../../styles/fonts";
+import { img_about } from "@images/general_img";
+import { paragraphsAbout, statsAbout } from "@constants";
+import { font_paragraph, font_title } from "@/styles/fonts";
 
 export const AboutSection = () => {
     const { ref: textRef, visible: textVisible } = useReveal();
@@ -12,9 +13,9 @@ export const AboutSection = () => {
     return (
         <section
             id="aboutMe"
-            className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
+            className={`${font_paragraph.className} flex justify-center py-16 max-md:py-10 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
         >
-            <div className="flex max-md:flex-col gap-16 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
+            <div className="flex max-md:flex-col gap-16 max-md:gap-6 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 {/* Imagen con efecto reveal */}
                 <div
                     ref={imgRef}
@@ -23,11 +24,11 @@ export const AboutSection = () => {
                     style={{ transitionDelay: "0.2s" }} // pequeño delay para que entre suave
                 >
                     <Image
-                        src={"/greenpath/landin.png"}
+                        src={img_about}
                         alt="Sobre BugHunter - Equipo de desarrollo web apasionado"
                         width={500}
                         height={500}
-                        className="object-cover rounded-lg w-full"
+                        className="object-cover rounded-lg w-full max-h-120"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         loading="lazy"
                         placeholder="blur"
@@ -40,12 +41,12 @@ export const AboutSection = () => {
                     <h2
                         ref={textRef}
                         className={`${font_title.className} ${styles.titleReveal} ${textVisible ? styles.visible : ""
-                            } text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
+                            } text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0] max-md:text-center`}
                     >
                         Sobre BugHunter
                     </h2>
 
-                    <div className="space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0]">
+                    <div className="space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0] max-md:text-justify">
                         {paragraphsAbout.map((p, i) => (
                             <p
                                 key={i}
@@ -58,7 +59,7 @@ export const AboutSection = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-wrap gap-10 mt-10">
+                    <div className="flex flex-wrap gap-10 max-md:gap-4 mt-10">
                         {statsAbout.map((s, i) => (
                             <div key={i}>
                                 <p className="text-2xl font-extrabold text-[#519872]">{s.value}</p>

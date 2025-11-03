@@ -2,11 +2,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { InputField } from "../ui/InputField";
-import { TextareaField } from "../ui/TextTarea";
-import { FormDataProps } from "@/types/FormData";
+import { TextareaField, InputField } from "@ui";
 import styles from "@/styles/scroll.module.css";
-import { font_paragraph } from "@/styles/fonts";
+import { FormDataProps } from "@/types/FormData";
 
 interface ContactFormProps {
   visible?: boolean;      // recibe si el formulario está visible
