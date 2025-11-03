@@ -1,12 +1,11 @@
 "use client";
+import { projects } from "@constants";
 import { Project } from "@/types/Project";
-import { projects } from "@/lib/constants";
-import { CardProject } from "../ui/CardProject";
-import { ModalProject } from "../ui/ModalProject";
-import { useState, useEffect, useRef } from "react";
 import { useReveal } from "@/utils/useReveal";
 import styles from "@/styles/scroll.module.css";
-import { font_paragraph, font_title } from "../../styles/fonts";
+import { ModalProject, CardProject } from "@ui";
+import { useState, useEffect, useRef } from "react";
+import { font_paragraph, font_title } from "@/styles/fonts";
 
 export const ProjectSection = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -40,7 +39,7 @@ export const ProjectSection = () => {
     return (
         <section
             id="projects"
-            className={`${font_paragraph.className} flex justify-center py-20 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
+            className={`${font_paragraph.className} flex justify-center py-20 max-md:py-10 dark:bg-[#212121] bg-[#F0F0EA] text-gray-800`}
         >
             <div className="flex flex-col gap-8 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center">
                 {/* 🔹 Animación del título */}
@@ -56,7 +55,7 @@ export const ProjectSection = () => {
                 <p
                     ref={paragraphRef}
                     className={`${styles.titleReveal} ${paragraphVisible ? styles.visible : ""
-                        } dark:text-[#B0B0B0]`}
+                        } dark:text-[#B0B0B0] max-md:text-justify`}
                 >
                     Conoce nuestro trabajo y los resultados que hemos logrado.
                 </p>

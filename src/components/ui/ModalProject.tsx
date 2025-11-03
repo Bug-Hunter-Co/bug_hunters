@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ImageCarousel } from "./ImageCarousel";
 import EyeIcon from "@mui/icons-material/RemoveRedEye";
 import { ModalProjectProps } from "@/types/ModalProjectProps";
-import { font_paragraph, font_title } from "../../styles/fonts";
+import { font_paragraph, font_title } from "@/styles/fonts";
 
 export const ModalProject = ({
     title,

@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { ButtonMode } from "@ui";
 import { useEffect, useState } from "react";
-import { ButtonMode } from "../ui/ButtonMode";
-import { NAVBAR_LINKS } from "@/lib/constants";
-import { font_title } from "../../styles/fonts";
+import { font_title } from "@/styles/fonts";
 import { useTheme } from "@/utils/ThemeProvider";
+import { navbarLink } from "@/lib/constants/index";
 
 export const Navbar = () => {
     const { theme } = useTheme();
@@ -46,7 +46,7 @@ export const Navbar = () => {
                 <Image src={"/logo_white.png"} alt="Bug Hunters logo" width={50} height={50} style={{ width: 'auto', height: 'auto' }} priority />
             )}
             <nav className="flex max-sm:hidden backdrop-blur-sxl gap-16 max-xl:gap-10 max-lg:gap-4 max-md:gap-3" role="navigation" aria-label="Navegación principal">
-                {NAVBAR_LINKS.map((item, index) => {
+                {navbarLink.map((item, index) => {
                     const isActive = activeSection === item.href.replace("#", "");
                     return (
                         <Link

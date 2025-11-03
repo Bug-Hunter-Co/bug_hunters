@@ -1,0 +1,6 @@
+export { cardsTeam } from './team'
+export { projects } from './projects'
+export { navbarLink } from './navbar'
+export { techLogos } from './techLogo'
+export { contactFooter, iconFooter } from './footer'
+export { paragraphsAbout, statsAbout } from './about'

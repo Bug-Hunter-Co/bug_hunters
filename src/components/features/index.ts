@@ -1,0 +1,7 @@
+export { AboutSection } from './AboutSection'
+export { FormSection } from './FormSection'
+export { HeroSection } from './HeroSection'
+export { InfoContact } from './InfoContact'
+export { ProjectSection } from './ProjectSection'
+export { TeamSection } from './TeamSection'
+export { TechSection } from './TechSection'

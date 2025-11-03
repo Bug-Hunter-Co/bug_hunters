@@ -1,10 +1,10 @@
+import { font_title } from "@/styles/fonts"
 import { contactFooter, iconFooter } from "@/lib/constants";
-import { font_title } from "../../styles/fonts"
 
 export const Footer = () => {
     return (
         <footer className={`${font_title.className} flex flex-col justify-center items-center bg-[#E1E1E1] w-full gap-4 dark:bg-[#2A2A2A]`}>
-            <div className="w-7/10 max-md:flex-col max-xl:w-8/10 max-lg:w-9/10 flex items-center justify-between text-gray-900 dark:text-[#E0E0E0] gap-6 max-lg:text-center border-b border-[#223843] dark:border-[#B0B0B0] py-9 pb-5">
+            <div className="w-7/10 max-md:flex-col max-xl:w-8/10 max-lg:w-9/10 flex items-center justify-between text-gray-900 dark:text-[#E0E0E0] gap-6 max-lg:text-center border-b border-[#223843] dark:border-[#B0B0B0] pt-9 max-md:pt-6 pb-5">
 
                 <div className="flex flex-col gap-2">
                     <h3 className="font-extrabold text-xl ">BugHunter</h3>

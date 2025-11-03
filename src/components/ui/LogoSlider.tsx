@@ -1,5 +1,5 @@
+import { techLogos } from "@constants";
 import { useEffect, useRef, useState } from "react";
-import { techLogos } from "@/lib/techLogo";
 
 const LogoSlider = () => {
     const [offset, setOffset] = useState(0);
