@@ -18,8 +18,8 @@ export const FormSection = () => {
         <section
             id="contact"
             className={`${font_paragraph.className} max-2xl:px-0 flex justify-center py-16 max-md:py-10 dark:bg-[#1E1E1E] bg-[#FFFFFB]`}>
-            <div className="grid grid-cols-5 max-lg:grid-cols-4 max-lg:flex max-lg:flex-col items-center w-7/10 max-xl:w-8/10 max-lg:w-9/10 justify-center gap-20 max-xl:gap-10">
-                <div className="col-span-3 max-lg:col-span-2">
+            <div className="grid grid-cols-2 max-lg:grid-cols-4 max-lg:flex max-lg:flex-col items-center w-7/10 max-xl:w-8/10 max-lg:w-9/10 justify-center gap-20 max-xl:gap-10">
+                <div className="max-lg:col-span-2">
                     <h3
                         ref={titleRef}
                         className={`${font_title.className} mb-10 text-[#223843] text-3xl font-bold dark:text-[#E0E0E0] max-md:text-center ${styles.titleReveal} ${titleVisible ? styles.visible : ""}`}>
@@ -41,7 +41,7 @@ export const FormSection = () => {
 
                 <div
                     ref={infoRef}
-                    className={`${styles.titleReveal} col-span-2 ${infoVisible ? styles.visible : ""}`}>
+                    className={`${styles.titleReveal} ${infoVisible ? styles.visible : ""}`}>
                     {/* Foto de Form */}
                     <Image className="rounded-lg max-h-120 object-cover" alt="contact" src={img_contact} width={500} height={500} />
                 </div>

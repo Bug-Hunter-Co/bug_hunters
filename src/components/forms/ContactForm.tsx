@@ -47,7 +47,7 @@ export const ContactForm = ({ visible = false, startIndex = 0 }: ContactFormProp
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="rounded-xl flex flex-col gap-8">
-      <div className="flex gap-8 w-full justify-between max-sm:flex-col">
+      <div className="grid grid-cols-2 gap-8 w-full max-sm:flex max-sm:flex-col">
         {/* Name */}
         <div className={`${styles.cardReveal} ${visible ? styles.visible : ""}`} style={{ transitionDelay: "0s" }}>
           <InputField
@@ -55,6 +55,7 @@ export const ContactForm = ({ visible = false, startIndex = 0 }: ContactFormProp
             placeholder="Tu nombre"
             register={register("name", { required: "Nombre es requerido" })}
             error={errors.name}
+            className="w-full"
           />
         </div>
 

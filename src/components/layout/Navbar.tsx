@@ -57,7 +57,7 @@ export const Navbar = () => {
                                 className={`${isActive
                                     ? "bg-[#37484E] dark:bg-[#789987] text-white"
                                     : "text-[#484848] dark:text-[#B0B0B0]"
-                                    } font-semibold hover:text-white hover:bg-[#37484E] dark:hover:bg-[#789987] py-2 px-3 rounded-xl hover:scale-105 uppercase text-sm max-lg:text-xs transition-all min-h-[44px] min-w-[44px] flex items-center justify-center`}
+                                    } font-semibold hover:text-white hover:bg-[#37484E] dark:hover:bg-[#789987] py-2 px-3 rounded-xl hover:scale-105 uppercase text-sm max-lg:text-xs transition-all min-h-11 min-w-11 flex items-center justify-center`}
                             >
                                 {item.text}
                             </Link>
