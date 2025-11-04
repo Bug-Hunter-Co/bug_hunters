@@ -1,11 +1,9 @@
 "use client";
-import { InfoContact } from "./InfoContact";
+import { VideoContact } from "@ui";
 import { useReveal } from "@/utils/useReveal";
 import styles from "@/styles/scroll.module.css";
 import { ContactForm } from "../forms/ContactForm";
 import { font_paragraph, font_title } from "@/styles/fonts";
-import Image from "next/image";
-import { img_contact } from "@/lib/images/general_img";
 
 export const FormSection = () => {
     // hooks para animaciones del título, párrafo, formulario y tarjeta de contacto
@@ -43,7 +41,7 @@ export const FormSection = () => {
                     ref={infoRef}
                     className={`${styles.titleReveal} ${infoVisible ? styles.visible : ""}`}>
                     {/* Foto de Form */}
-                    <Image className="rounded-lg max-h-120 object-cover" alt="contact" src={img_contact} width={500} height={500} />
+                    <VideoContact />
                 </div>
             </div>
         </section>
