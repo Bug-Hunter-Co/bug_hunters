@@ -4,6 +4,8 @@ import { useReveal } from "@/utils/useReveal";
 import styles from "@/styles/scroll.module.css";
 import { ContactForm } from "../forms/ContactForm";
 import { font_paragraph, font_title } from "@/styles/fonts";
+import Image from "next/image";
+import { img_contact } from "@/lib/images/general_img";
 
 export const FormSection = () => {
     // hooks para animaciones del título, párrafo, formulario y tarjeta de contacto
@@ -15,7 +17,7 @@ export const FormSection = () => {
     return (
         <section
             id="contact"
-            className={`${font_paragraph.className} px-50 max-2xl:px-0 flex justify-center py-16 max-md:py-10 dark:bg-[#1E1E1E] bg-[#FFFFFB]`}>
+            className={`${font_paragraph.className} max-2xl:px-0 flex justify-center py-16 max-md:py-10 dark:bg-[#1E1E1E] bg-[#FFFFFB]`}>
             <div className="grid grid-cols-5 max-lg:grid-cols-4 max-lg:flex max-lg:flex-col items-center w-7/10 max-xl:w-8/10 max-lg:w-9/10 justify-center gap-20 max-xl:gap-10">
                 <div className="col-span-3 max-lg:col-span-2">
                     <h3
@@ -39,8 +41,9 @@ export const FormSection = () => {
 
                 <div
                     ref={infoRef}
-                    className={`${styles.titleReveal} ${infoVisible ? styles.visible : ""}`}>
-                    <InfoContact />
+                    className={`${styles.titleReveal} col-span-2 ${infoVisible ? styles.visible : ""}`}>
+                    {/* Foto de Form */}
+                    <Image className="rounded-lg max-h-120 object-cover" alt="contact" src={img_contact} width={500} height={500} />
                 </div>
             </div>
         </section>
