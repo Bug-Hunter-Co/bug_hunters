@@ -22,7 +22,7 @@ export const TextareaField: React.FC<TextareaFieldProps> = ({
                 id={id}
                 {...register}
                 placeholder={placeholder}
-                className={`p-4 rounded-md bg-[#F4F5F0] placeholder:text-gray-800 dark:placeholder:text-[#B0B0B0] dark:bg-[#2A2A2A] resize-none`}
+                className={`p-4 rounded-md bg-[#F4F5F0] placeholder:text-gray-800 dark:placeholder:text-[#B0B0B0] dark:text-white dark:bg-[#2A2A2A] resize-none`}
                 style={{ minHeight }}
             />
 
