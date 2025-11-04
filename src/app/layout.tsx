@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/utils/ThemeProvider";
 import { getTheme } from "@/utils/theme";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +34,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const initialTheme = await getTheme();
-
   return (
     <html lang="es" data-scroll-behavior="smooth">
       <body
