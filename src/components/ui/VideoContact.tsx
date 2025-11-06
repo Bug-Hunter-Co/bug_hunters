@@ -36,13 +36,13 @@ export const VideoContact = () => {
         <video
             ref={videoRef}
             className="rounded-lg w-full object-cover"
-            width={500}
-            height={500}
-            src="/BugHunter_video.mp4"
+            width={400}
+            height={400}
+            src="https://res.cloudinary.com/drxfmsqbo/video/upload/v1762387172/formSection_rj4ies.3gp"
             loop
             muted
             playsInline
-            controls
+            autoPlay
         />
     );
-}
+};

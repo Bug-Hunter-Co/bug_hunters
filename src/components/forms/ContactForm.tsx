@@ -90,7 +90,7 @@ export const ContactForm = ({ visible = false, startIndex = 0 }: ContactFormProp
           ref={recaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
           onChange={(value) => {
-           
+
           }}
         />
       </div>
