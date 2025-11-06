@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  compress: true,
+  images: {
+    formats: ["image/webp", "image/avif"],
+    domains: ["res.cloudinary.com"],  
+  },
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 export default nextConfig;

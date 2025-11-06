@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bug Hunters - Desarrollo Web Freelance
 
-## Getting Started
+¡Bienvenido a Bug Hunters! Somos un equipo de desarrolladores apasionados por transformar ideas en soluciones digitales innovadoras. Especializados en desarrollo web moderno, creamos experiencias digitales que impulsan el crecimiento de tu negocio.
 
-First, run the development server:
+## 🚀 Servicios
+
+- **Sitios Web Corporativos**: Presencia online profesional y atractiva
+- **Aplicaciones Web Interactivas**: Soluciones personalizadas para tus necesidades
+- **E-commerce**: Plataformas de venta online completas
+- **Landing Pages**: Páginas de conversión optimizadas
+- **APIs y Backend**: Servicios robustos y escalables
+
+## 🛠️ Tecnologías
+
+Trabajamos con las últimas tecnologías para garantizar calidad y rendimiento:
+
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, APIs RESTful
+- **Bases de Datos**: MySQL, MongoDB
+- **Herramientas**: Git, Vercel, Material-UI
+
+## 📊 Nuestros Resultados
+
+- ✅ 50+ Proyectos Completados
+- ✅ 100% Satisfacción del Cliente
+- ✅ 8+ Meses de Experiencia
+- ✅ Soluciones Personalizadas
+
+## 💬 ¿Tienes un Proyecto?
+
+¿Quieres llevar tu idea al siguiente nivel? ¡Hablemos!
+
+- 📧 Envíanos un mensaje a través de nuestro formulario de contacto
+- 💼 Describe tu proyecto y te daremos una cotización personalizada
+- ⚡ Desarrollo rápido y eficiente con entrega garantizada
+
+## 🏃‍♂️ Inicio Rápido
+
+Si eres desarrollador y quieres contribuir o ejecutar el proyecto localmente:
 
 ```bash
+# Instalar dependencias
+npm install
+# o
+pnpm install
+
+# Ejecutar servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
+# o
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Scripts Disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Construir para producción
+- `npm run start` - Ejecutar en producción
+- `npm run lint` - Ejecutar linter
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Bug Hunters** - Transformamos tu visión en realidad digital. ¡Conectemos y hagamos algo increíble juntos!

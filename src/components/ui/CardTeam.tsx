@@ -1,5 +1,5 @@
 "use client";
-import { cardsTeam } from "@/lib/constants";
+import { cardsTeam } from "@/lib/constants/index";
 import { CardProps } from "@/types/CardTeam";
 import styles from "@/styles/scroll.module.css";
 import { useEffect, useRef, useState } from "react";
