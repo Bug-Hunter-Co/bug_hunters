@@ -17,7 +17,7 @@ export const TeamSection = () => {
                 {/* Título animado */}
                 <h2
                     ref={titleRef}
-                    className={`${font_title.className} ${styles.titleReveal} ${titleVisible ? styles.visible : ""} text-3xl font-extrabold text-gray-900 mb-6 dark:text-[#E0E0E0]`}
+                    className={`${font_title.className} ${styles.titleReveal} ${titleVisible ? styles.visible : ""} text-3xl font-extrabold text-[#37484E] dark:text-white mb-6`}
                 >
                     Nuestro equipo
                 </h2>

@@ -41,11 +41,14 @@ export const Navbar = () => {
             <nav
                 className={`${font_title.className} shadow max-sm:h-18 z-50 flex rounded-xl mt-10 py-4 px-10 max-md:px-5 w-7/10 max-xl:w-8/10 max-lg:w-9/10 max-md:w-full max-md:rounded-none max-md:mt-0 items-center justify-between bg-[#FDF8F4] dark:bg-[#2A2A2A] fixed`}
             >
-                {theme === "light" ? (
-                    <Image src={logo_light} alt="Bug Hunters logo" width={50} height={50} style={{ width: 'auto', height: 'auto' }} priority />
-                ) : (
-                    <Image src={logo_dark} alt="Bug Hunters logo" width={50} height={50} style={{ width: 'auto', height: 'auto' }} priority />
-                )}
+                <Link href="#inicio">
+                    <Image
+                        src={theme == 'light' ?
+                            logo_light
+                            :
+                            logo_dark}
+                        alt="Bug Hunters logo" width={50} height={50} style={{ width: 'auto', height: 'auto' }} priority />
+                </Link>
                 <div className="flex max-sm:hidden backdrop-blur-sxl gap-16 max-xl:gap-10 max-lg:gap-4 max-md:gap-3" role="navigation" aria-label="Navegación principal">
                     {navbarLink.map((item, index) => {
                         const isActive = activeSection === item.href.replace("#", "");

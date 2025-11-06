@@ -5,11 +5,11 @@ import { font_paragraph, font_title } from '@/styles/fonts'
 
 export const HeroSection = () => {
     return (
-        <section id='inicio' className={`${font_paragraph.className} flex justify-center pt-40 max-md:pt-26 pb-20 max-md:pb-10 dark:bg-[#1E1E1E] bg-[#FFFFFB] text-gray-800`} >
+        <section id='inicio' className={`${font_paragraph.className} flex justify-center pt-40 max-md:pt-26 pb-20 max-md:pb-10 dark:bg-[#1E1E1E] bg-[#FFFFFB]`} >
             <div className='flex max-md:flex-col gap-16 max-md:gap-0 w-7/10 max-xl:w-8/10 max-lg:w-9/10 items-center'>
                 <div className='text-gray-900 mb-6 w-full dark:text-[#E0E0E0] flex flex-col gap-8 max-md:items-center'>
-                    <h1 className={`${font_title.className} text-4xl font-extrabold max-md:text-center`}>Transforma tu vision en realidad digital</h1>
-                    <p className='max-md:text-justify'>Únete a nosotros y forma parte de un equipo dinámico, donde la innovación, la creatividad y el trabajo en equipo son la clave para alcanzar el éxito. ¡Si tienes una idea, nosotros la hacemos realidad!</p>
+                    <h1 className={`${font_title.className} text-4xl font-extrabold max-md:text-center text-[#37484E] dark:text-white`}>Transforma tu vision en realidad digital</h1>
+                    <p className='max-md:text-justify text-gray-700 dark:text-[#B0B0B0]'>Únete a nosotros y forma parte de un equipo dinámico, donde la innovación, la creatividad y el trabajo en equipo son la clave para alcanzar el éxito. ¡Si tienes una idea, nosotros la hacemos realidad!</p>
                     <div className='flex gap-8 font-bold max-lg:text-sm max-xl:gap-6'>
                         <Link href="#contact" aria-label="Ir a la sección de contacto para comenzar un proyecto">
                             <button className='cursor-pointer bg-[#37484E] px-8 py-4 rounded-lg text-white dark:bg-[#789987] max-xl:px-6 hover:scale-105 transition-transform min-h-[44px] min-w-[44px]'>Comienza ahora</button>

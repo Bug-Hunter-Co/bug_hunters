@@ -20,7 +20,7 @@ export const FormSection = () => {
                 <div className="max-lg:col-span-2">
                     <h3
                         ref={titleRef}
-                        className={`${font_title.className} mb-10 text-[#223843] text-3xl font-bold dark:text-[#E0E0E0] max-md:text-center ${styles.titleReveal} ${titleVisible ? styles.visible : ""}`}>
+                        className={`${font_title.className} mb-10 text-3xl font-bold text-[#37484E] dark:text-white max-md:text-center ${styles.titleReveal} ${titleVisible ? styles.visible : ""}`}>
                         ¿Tienes una idea?
                         <br />
                         ¡Hablemos!
@@ -29,7 +29,7 @@ export const FormSection = () => {
                     <p
                         ref={paragraphRef}
                         className={`dark:text-[#B0B0B0] max-md:text-justify text-gray-800 mb-10 mt-5 ${styles.titleReveal} ${paragraphVisible ? styles.visible : ""}`}>
-                        Completa el formulario y nos pondre en contacto contigo a la brevedad
+                        Por favor, completa el formulario y nos pondremos en contacto contigo lo antes posible.
                     </p>
 
                     <div ref={formRef}>
