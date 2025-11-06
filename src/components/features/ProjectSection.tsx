@@ -46,7 +46,7 @@ export const ProjectSection = () => {
                 <h1
                     ref={titleRef}
                     className={`${font_title.className} ${styles.titleReveal} ${titleVisible ? styles.visible : ""
-                        } text-3xl font-bold dark:text-[#E0E0E0]`}
+                        } text-3xl font-bold text-[#37484E] dark:text-white`}
                 >
                     Proyectos Destacados
                 </h1>
@@ -55,7 +55,7 @@ export const ProjectSection = () => {
                 <p
                     ref={paragraphRef}
                     className={`${styles.titleReveal} ${paragraphVisible ? styles.visible : ""
-                        } dark:text-[#B0B0B0] max-md:text-justify`}
+                        } max-md:text-justify text-gray-700 dark:text-[#B0B0B0]`}
                 >
                     Conoce nuestro trabajo y los resultados que hemos logrado.
                 </p>

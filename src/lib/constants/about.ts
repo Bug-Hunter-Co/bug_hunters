@@ -7,6 +7,8 @@ export const statsAbout: stat[] = [
 ]
 
 export const paragraphsAbout: string[] = [
-    "Somos un equipo de desarrolladores apasionados por crear páginas web de alta calidad. Como freelancers, ofrecemos soluciones personalizadas para todo tipo de proyectos: desde sitios corporativos hasta aplicaciones interactivas. En Bug Hunters, ayudamos a las empresas a destacar en línea con experiencias digitales intuitivas, funcionales y seguras.",
-    "Únete a nosotros y forma parte de un equipo dinámico, donde la innovación, la creatividad y el trabajo en equipo son la clave para alcanzar el éxito. ¡Si tienes una idea, nosotros la hacemos realidad!"
+    "En Bug Hunters, somos un equipo de desarrolladores apasionados por transformar ideas en experiencias digitales memorables. Nos especializamos en el diseño y desarrollo de páginas web y aplicaciones personalizadas, adaptadas a las necesidades de cada cliente desde proyectos corporativos hasta soluciones interactivas y dinámicas.",
+    "Como freelancers comprometidos con la excelencia, combinamos creatividad, innovación y tecnología para crear plataformas intuitivas, funcionales y seguras, capaces de impulsar la presencia digital de cualquier marca.",
+    "Únete a un equipo donde la colaboración y la pasión por el código se unen para hacer posible lo imposible.",
+    '"Si puedes imaginarlo, nosotros podemos desarrollarlo"'
 ]
