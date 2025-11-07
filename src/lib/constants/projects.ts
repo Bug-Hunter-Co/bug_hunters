@@ -12,21 +12,21 @@ export const projects: Project[] = [
     {
         title: "GreenPath",
         description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-        tecnologies: ["Next.js", "Tailwind", "MySql"],
+        tecnologies: ["Next.js", "Tailwind", "MySql", "Express"],
         path: "https://google.com",
         srcs: [greenpath_landin, greenpath_login, greenpath_register, greenpath_dashboard]
     },
     {
         title: "GreenPath",
         description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-        tecnologies: ["Next.js", "Tailwind", "MySql"],
+        tecnologies: ["Next.js", "Tailwind", "MySql", "NestJs"],
         path: "https://google.com",
         srcs: [greenpath_landin, greenpath_login, greenpath_register, greenpath_dashboard]
     },
     {
         title: "GreenPath",
         description: "Pagina web para ayudar a vender productos, 'Del campo a tu casa' la mejor opcion",
-        tecnologies: ["Next.js", "Tailwind", "MySql"],
+        tecnologies: ["Next.js", "Tailwind", "MySql", "FastAPI"],
         path: "https://google.com",
         srcs: [greenpath_landin, greenpath_login, greenpath_register, greenpath_dashboard]
     }
