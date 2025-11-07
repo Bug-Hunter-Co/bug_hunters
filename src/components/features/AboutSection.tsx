@@ -45,7 +45,7 @@ export const AboutSection = () => {
                         Sobre BugHunter
                     </h2>
 
-                    <div className="space-y-4 text-gray-700 leading-relaxed dark:text-[#B0B0B0] max-md:text-justify">
+                    <div className="space-y-4 max-md:text-justify text-gray-700 leading-relaxed dark:text-[#B0B0B0]">
                         {paragraphsAbout.map((p, i) => (
                             <p
                                 key={i}
